@@ -1,0 +1,13 @@
+.result {
+  display:none;
+}
+.result.active {
+  display: flex;
+  flex-wrap: wrap;
+  color: #003366;
+  background-color: #F9EBEA;
+  width: 860px;
+  height: 100px;
+  overflow-y: scroll;
+  margin:0;
+}
