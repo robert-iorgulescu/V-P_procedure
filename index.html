@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - New MS VISIO AND MS PROJECT PROCEDURE</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<p> Did the user raised the ticket with the dedicated catalog tile, or did they use a generic "Request Another Service" catalog?</p>
+<select id="catalog_check">
+    <option value="select">select</option>
+    <option value="dedicated">User raised the ticket with the dedicated catalog item</option>
+    <option value="generic">User raised the ticket with the generic Request another service catalog item</option>
+</select>
+</br>
+
+<p> User will need an E3 office license. Do they have the proper license?</p>
+<select id="license_check">
+    <option value="select">select</option>
+    <option value="E3_C2R">User has the proper license; E3/C2R/ProPlus</option>
+    <option value="E1_MSI">User has the incorrect license, E1 MSI. They need a license upgrade first</option>
+</select>
+</br>
+
+<p> What device does the user have? a KHC dedicated one, a KHC shared one, or a non KHC device?</p>
+<select id="pc_check">
+    <option value="select">select</option>
+    <option value="dedicated">User has a dedicated KHC computer</option>
+    <option value="shared">User has a KHC shared computer</option>
+    <option value="not-khc">User does not have a KHC computer</option>
+</select>
+</br>
+
+<p> Check if the user is already part of the MS Visio/MS Project AD groups.</p>
+<select id="ad_check">
+    <option value="select">select</option>
+    <option value="new">User not present in Visio/Project AD groups; this is a new request</option>
+    <option value="previous">User is present in Visio/Project AD groups; they should already have access</option>
+</select>
+
+
+  <p> Procedure for you to apply:</p>
+
+
+<div class="procedure">
+<div class="result" data-catalog_check="dedicated" data-license_check="E3_C2R" data-pc_check="dedicated" data-ad_check="new">SD receives the SCTASK, please route to KHC.IT SAM</div>
+<div class="result" data-catalog_check="dedicated" data-license_check="E3_C2R" data-pc_check="dedicated" data-ad_check="previous">The user already has MS Visio/MS Project in Software Center, since he is part of the AD groups used previously, we do not provide access. Inform the user to install the MS Visio/MS Project from Software Center and close the ticket. </div>
+<div class="result" data-catalog_check="dedicated" data-license_check="E3_C2R" data-pc_check="shared" data-ad_check="new">Close the ticket and raise a new one using the "Request Another Service" catalog item. You will grant access by adding the user to the proper AD group. </div>
+<div class="result" data-catalog_check="dedicated" data-license_check="E3_C2R" data-pc_check="shared" data-ad_check="previous">The user already has MS Visio/MS Project in Software Center, since he is part of the AD groups used previously, we do not provide access. Inform the user to install the MS Visio/MS Project from Software Center and close the ticket.</div>
+<div class="result" data-catalog_check="dedicated" data-license_check="E3_C2R" data-pc_check="not-khc" data-ad_check="new">SD receives the SCTASK, please route to KHC.IT SAM</div>
+<div class="result" data-catalog_check="dedicated" data-license_check="E3_C2R" data-pc_check="not-khc" data-ad_check="previous">SD receives the SCTASK, please route to KHC.IT SAM</div>
+
+<div class="result" data-catalog_check="dedicated" data-license_check="E1_MSI" data-pc_check="dedicated" data-ad_check="new">License needs to be upgraded before the user can receive MS Visio/MS Project. Raise a new ticket to process the license upgrade to E3. Close the user’s initial ticket and inform them that you have raised a new ticket to grant them license. Once you are ready to escalate the ticket to grant license, email the user and inform them that after they receive the license, they should raise the request for MS Visio/MS Project </div>
+<div class="result" data-catalog_check="dedicated" data-license_check="E1_MSI" data-pc_check="dedicated" data-ad_check="previous">The user already has MS Visio/MS Project in Software Center, since he is part of the AD groups used previously, we do not provide access. Inform the user to install the MS Visio/MS Project from Software Center and close the ticket.</div>
+<div class="result" data-catalog_check="dedicated" data-license_check="E1_MSI" data-pc_check="shared" data-ad_check="new">Close the ticket and raise a new one using the "Request Another Service" catalog item. You will grant access by adding the user to the proper AD group.</div>
+<div class="result" data-catalog_check="dedicated" data-license_check="E1_MSI" data-pc_check="shared" data-ad_check="previous">The user already has MS Visio/MS Project in Software Center, since he is part of the AD groups used previously, we do not provide access. Inform the user to install the MS Visio/MS Project from Software Center and close the ticket.</div>
+<div class="result" data-catalog_check="dedicated" data-license_check="E1_MSI" data-pc_check="not-khc" data-ad_check="new">This should not be possible, and currently not supported. Please inform KHCSDManagement@stefanini.com and place the ticket On Hold/Pending</div>
+<div class="result" data-catalog_check="dedicated" data-license_check="E1_MSI" data-pc_check="not-khc" data-ad_check="previous">This should not be possible, and currently not supported. Please inform KHCSDManagement@stefanini.com and place the ticket On Hold/Pending</div>
+
+<div class="result" data-catalog_check="generic" data-license_check="E3_C2R" data-pc_check="dedicated" data-ad_check="new">Close the ticket, guide the user to use the MS Project/MS Visio access request dedicated catalog item</div>
+<div class="result" data-catalog_check="generic" data-license_check="E3_C2R" data-pc_check="dedicated" data-ad_check="previous">Close the ticket, guide the user to use the MS Project/MS Visio access request dedicated catalog item</div>
+<div class="result" data-catalog_check="generic" data-license_check="E3_C2R" data-pc_check="shared" data-ad_check="new">Close the ticket, guide the user to use the MS Project/MS Visio access request dedicated catalog item</div>
+<div class="result" data-catalog_check="generic" data-license_check="E3_C2R" data-pc_check="shared" data-ad_check="previous">Close the ticket, guide the user to use the MS Project/MS Visio access request dedicated catalog item</div>
+<div class="result" data-catalog_check="generic" data-license_check="E3_C2R" data-pc_check="not-khc" data-ad_check="new">Close the ticket, guide the user to use the MS Project/MS Visio access request dedicated catalog item</div>
+<div class="result" data-catalog_check="generic" data-license_check="E3_C2R" data-pc_check="not-khc" data-ad_check="previous">Close the ticket, guide the user to use the MS Project/MS Visio access request dedicated catalog item</div>
+
+<div class="result" data-catalog_check="generic" data-license_check="E1_MSI" data-pc_check="dedicated" data-ad_check="new">First, figure out the user's computer: is it a KHC device dedicated to them or a KHC shared device, or a non KHC device?
+For dedicated, the generic catalog item should be used for license upgrade. Once this is done, the user should be informed to raise a new request using the proper tile. SD to inform the user before sending the ticket to GAA for license upgrade via email (template with instructions)</div>
+<div class="result" data-catalog_check="generic" data-license_check="E1_MSI" data-pc_check="dedicated" data-ad_check="previous">First, figure out the user's computer: is it a KHC device dedicated to them or a KHC shared device, or a non KHC device?
+For dedicated, the generic catalog item should be used for license upgrade. Once this is done, the user should be informed to raise a new request using the proper tile. SD to inform the user before sending the ticket to GAA for license upgrade via email (template with instructions)</div>
+<div class="result" data-catalog_check="generic" data-license_check="E1_MSI" data-pc_check="shared" data-ad_check="new">You will grant access by adding the user to the proper AD group.</div>
+<div class="result" data-catalog_check="generic" data-license_check="E1_MSI" data-pc_check="shared" data-ad_check="previous">The user already has MS Visio/MS Project in Software Center, since he is part of the AD groups used previously, we do not provide access. Inform the user to install the MS Visio/MS Project from Software Center and close the ticket.</div>
+<div class="result" data-catalog_check="generic" data-license_check="E1_MSI" data-pc_check="not-khc" data-ad_check="new">This should not be possible, and currently not supported. Please inform KHCSDManagement@stefanini.com and place the ticket On Hold/Pending</div>
+<div class="result" data-catalog_check="generic" data-license_check="E1_MSI" data-pc_check="not-khc" data-ad_check="previous">This should not be possible, and currently not supported. Please inform KHCSDManagement@stefanini.com and place the ticket On Hold/Pending</div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
