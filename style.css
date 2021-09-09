@@ -1,11 +1,21 @@
+
+
 select {
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 
 a {
   display: none !important;
 }
 
+p {
+  font-size: 20px;
+}
+
+.procedure {
+  font-size: 20px;
+  line-height: 1.5;
+}
 
 .result {
   display:none;
@@ -18,5 +28,5 @@ a {
   width: 860px;
   height: 100px;
   overflow-y: scroll;
-  margin:0;
 }
+
