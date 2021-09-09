@@ -3,8 +3,9 @@ select {
 }
 
 a {
-  display:none;
+  display: none !important;
 }
+
 
 .result {
   display:none;
