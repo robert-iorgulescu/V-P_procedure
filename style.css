@@ -2,8 +2,8 @@ select {
   margin-bottom: 30px;
 }
 
-.btn {
-  display: none !important;
+a {
+  display:none;
 }
 
 .result {
