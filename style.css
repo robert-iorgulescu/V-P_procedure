@@ -6,6 +6,10 @@ a {
   display: none !important;
 }
 
+span {
+  display: none !important;
+}
+
 p {
   font-size: 20px;
 }
