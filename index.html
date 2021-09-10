@@ -12,21 +12,25 @@ layout: default
 </head>
 <body>
 <!-- partial:index.partial.html -->
+<div class="flex-container">
 <p> Did the user raised the ticket with the dedicated catalog tile, or did they use a generic "Request Another Service" catalog?</p>
 <select id="catalog_check">
     <option value="select">select</option>
     <option value="dedicated">User raised the ticket with the dedicated catalog item</option>
     <option value="generic">User raised the ticket with the generic Request another service catalog item</option>
 </select>
+</div>
 
+<div class="flex-container">
 <p> User will need an E3 office license. Do they have the proper license?</p>
 <select id="license_check">
     <option value="select">select</option>
     <option value="E3_C2R">User has the proper license; E3/C2R/ProPlus</option>
     <option value="E1_MSI">User has the incorrect license, E1 MSI. They need a license upgrade first</option>
 </select>
+</div>
 
-
+<div class="flex-container">
 <p> What device does the user have? a KHC dedicated one, a KHC shared one, or a non KHC device?</p>
 <select id="pc_check">
     <option value="select">select</option>
@@ -34,15 +38,16 @@ layout: default
     <option value="shared">User has a KHC shared computer</option>
     <option value="not-khc">User does not have a KHC computer</option>
 </select>
+</div>
 
-
+<div class="flex-container">
 <p> Check if the user is already part of the MS Visio/MS Project AD groups.</p>
 <select id="ad_check">
     <option value="select">select</option>
     <option value="new">User not present in Visio/Project AD groups; this is a new request</option>
     <option value="previous">User is present in Visio/Project AD groups; they should already have access</option>
 </select>
-
+</div>
 
 <p> Procedure for you to apply:</p>
 
