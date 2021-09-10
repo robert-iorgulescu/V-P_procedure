@@ -1,6 +1,9 @@
 select {
   margin-bottom: 60px;
   padding: 6px;
+  display: flex;
+  height: auto;
+  max-width: 800px;
 }
 
 a {
@@ -29,8 +32,13 @@ p {
   flex-wrap: wrap;
   color: #003366;
   background-color: #F9EBEA;
-  width: 860px;
-  height: 100px;
+  max-width: 860px;
+  height: auto;
   overflow-y: scroll;
   text-align: center;
+}
+
+h1{
+  display: flex;
+  flex-wrap: wrap;
 }
